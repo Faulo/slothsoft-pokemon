@@ -1,5 +1,5 @@
 <?php
-use Slothsoft\CMS\HTTPFile;
+use Slothsoft\Farah\HTTPFile;
 
 $spritesURI = 'http://www.bisafans.de/pokedex/gen.php';
 

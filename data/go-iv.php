@@ -173,7 +173,7 @@ function getPokemonId(array $data, $name)
 $resourceList = $this->getResourceDir('pokemon/go-trainers', 'xml');
 $retNode = null;
 if (isset($resourceList[$trainer])) {
-    $trainerElement = \Schema\DataElement::loadDocument($resourceList[$trainer], $trainerSchema);
+    $trainerElement = \Slothsoft\Schema\DataElement::loadDocument($resourceList[$trainer], $trainerSchema);
     
     foreach ($trainerElement->getElementList() as $monElement) {
         $mon = $monElement->getAttributes();

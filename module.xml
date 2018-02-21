@@ -1,49 +1,63 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module>
+<?xml version="1.0"?>
+<module xmlns="http://schema.slothsoft.net/farah/module" xmlns:sfm="http://schema.slothsoft.net/farah/module">
+  <!--
+Farah Module Manifest
 
-	<fragment name="sprites">
-		<!--<data name="sprites"/> -->
-		<data name="list" />
-		<template name="_sprites" />
-		<param name="standalone" scope="global" />
-		<struc name="/core/HTML5" />
-	</fragment>
+Module: pokemon
+Vendor: slothsoft
+Farah ID: farah://slothsoft@pokemon
+Composer ID: slothsoft/pokemon
 
-	<fragment name="team">
-		<res name="team" load="xml" />
-		<res name="list" load="xml" />
-		<template name="_team" />
-		<param name="standalone" scope="global" />
-		<struc name="/core/HTML5" />
-	</fragment>
+Homepage: http://farah.slothsoft.net/modules/pokemon
+Packagist: https://packagist.org/packages/slothsoft/pokemon
+GitHub: https://github.com/Faulo/slothsoft-pokemon
 
-	<fragment name="go-iv">
-		<data name="go-iv" />
-		<template name="_go-iv" />
-		<param name="standalone" scope="global" />
-	</fragment>
-
-	<!-- pages -->
-	<fragment name="home">
-		<data name="default" />
-		<style name="default" />
-		<fragment name="content">
-			<template name="home" />
-			<struc name="/core/DOM" />
-			<res name="/core/sites" load="xml" />
-			<res name="news" load="xml" />
-			<call name="log-wrapper" as="log" />
-			<call name="/chat/default" as="chat-short" />
-		</fragment>
-	</fragment>
-
-	<!-- json -->
-	<resource name="go-data" path="go-data.json" type="application/json" />
-
-	<resourceDir name="go-trainers" path="go-trainers" type="application/xml" />
-
-	<resource name="team" path="team.xml" type="application/xml" />
-	<resource name="list" path="list.xml" type="application/xml" />
-
-	<resourceDir name="sprites" path="sprites" type="image/png" />
+Llo
+-->
+  <default-configuration/>
+  <assets>
+    <resource-directory name="data" path="data" type="application/x-php"/>
+    <resource-directory name="css" path="stylesheet" type="text/css"/>
+    <resource-directory name="js" path="script" type="application/javascript"/>
+    <resource-directory name="xsl" path="template" type="application/xslt+xml"/>
+    <resource-directory name="dictionary" path="dictionary" type="application/xml"/>
+    <resource-directory name="pages" path="pages" type="application/xml"/>
+    <fragment name="sprites">
+      <use-document ref="data/list"/>
+      <use-template ref="xsl/_sprites"/>
+      <param name="standalone" scope="global"/>
+      <include-fragment ref="//slothsoft@core/HTML5"/>
+    </fragment>
+    <fragment name="team">
+      <use-document ref="static/team"/>
+      <use-document ref="static/list"/>
+      <use-template ref="xsl/_team"/>
+      <param name="standalone" scope="global"/>
+      <include-fragment ref="//slothsoft@core/HTML5"/>
+    </fragment>
+    <fragment name="go-iv">
+      <use-document ref="data/go-iv"/>
+      <use-template ref="xsl/_go-iv"/>
+      <param name="standalone" scope="global"/>
+    </fragment>
+    <fragment name="home">
+      <use-document ref="data/default"/>
+      <use-stylesheet ref="css/default"/>
+      <fragment name="content">
+        <use-template ref="xsl/home"/>
+        <include-fragment ref="//slothsoft@core/DOM"/>
+        <use-document ref="//slothsoft@core/static/sites"/>
+        <use-document ref="static/news"/>
+        <use-document as="log" ref="log-wrapper"/>
+        <use-document as="chat-short" ref="//slothsoft@chat/default"/>
+      </fragment>
+    </fragment>
+    <directory name="static">
+      <resource name="go-data" path="go-data.json" type="application/json"/>
+      <resource-directory name="go-trainers" path="go-trainers" type="application/xml"/>
+      <resource name="team" path="team.xml" type="application/xml"/>
+      <resource name="list" path="list.xml" type="application/xml"/>
+      <resource-directory name="sprites" path="sprites" type="image/png"/>
+    </directory>
+  </assets>
 </module>

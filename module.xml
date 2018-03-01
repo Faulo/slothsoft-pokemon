@@ -33,14 +33,14 @@ Llo
       <use-document ref="data/list"/>
       <use-template ref="xsl/_sprites"/>
       <param name="standalone" scope="global"/>
-      <include-fragment ref="//slothsoft@core/HTML5"/>
+      <import ref="//slothsoft@core/HTML5"/>
     </fragment>
     <fragment name="team">
       <use-document ref="static/team"/>
       <use-document ref="static/list"/>
       <use-template ref="xsl/_team"/>
       <param name="standalone" scope="global"/>
-      <include-fragment ref="//slothsoft@core/HTML5"/>
+      <import ref="//slothsoft@core/HTML5"/>
     </fragment>
     <fragment name="go-iv">
       <use-document ref="data/go-iv"/>
@@ -52,7 +52,7 @@ Llo
       <use-stylesheet ref="css/default"/>
       <fragment name="content">
         <use-template ref="xsl/home"/>
-        <include-fragment ref="//slothsoft@core/DOM"/>
+        <import ref="//slothsoft@core/DOM"/>
         <use-document ref="//slothsoft@core/static/sites"/>
         <use-document ref="static/news"/>
         <use-document as="log" ref="log-wrapper"/>

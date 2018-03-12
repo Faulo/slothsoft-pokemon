@@ -45,7 +45,7 @@ $tempDir = realpath(__DIR__ . '/../res/sprites-raw');
 $targetDir = realpath(__DIR__ . '/../res/sprites');
 
 $monList = [];
-if ($spriteXPath = $this->loadExternalXPath($spritesURI, TIME_DAY)) {
+if ($spriteXPath = $this->loadExternalXPath($spritesURI, Seconds::DAY)) {
     $rowNodeList = $spriteXPath->evaluate('/div/table/tbody/tr');
     
     $spriteQueryList = [];
@@ -66,7 +66,7 @@ if ($spriteXPath = $this->loadExternalXPath($spritesURI, TIME_DAY)) {
         $mon['no'] = (int) $mon['no'];
         $mon['href-en'] = sprintf('http://bulbapedia.bulbagarden.net/w/index.php?title=Special:Search&search=%s', rawurlencode($mon['name-en']));
         
-        if ($wikiXPath = $this->loadExternalXPath($mon['href-en'], TIME_YEAR)) {
+        if ($wikiXPath = $this->loadExternalXPath($mon['href-en'], Seconds::YEAR)) {
             echo $mon['href-en'] . PHP_EOL;
             foreach ($wikiQueryList as $key => $query) {
                 $mon[$key] = $wikiXPath->evaluate(sprintf('normalize-space(%s)', $query));

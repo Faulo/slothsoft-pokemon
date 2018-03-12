@@ -17,12 +17,12 @@ if ($filter) {
     foreach ($filter as $key => $val) {
         $val = (int) $val;
         if (isset($filterList[$key])) {
-            if ($xpath = $this->loadExternalXPath($filterList[$key], TIME_DAY)) {
+            if ($xpath = $this->loadExternalXPath($filterList[$key], Seconds::DAY)) {
                 $host = 'http://' . parse_url($filterList[$key], PHP_URL_HOST);
                 $linkNodeList = $xpath->evaluate('//*[@id="mw-pages"]//@href');
                 foreach ($linkNodeList as $linkNode) {
                     if ($uri = $linkNode->value) {
-                        if ($tmpPath = $this->loadExternalXPath($host . $uri, TIME_YEAR)) {
+                        if ($tmpPath = $this->loadExternalXPath($host . $uri, Seconds::YEAR)) {
                             $no = $tmpPath->evaluate('substring-after(//*[@width="25%"], "#")');
                             $no = trim($no);
                             if ($no = (int) $no) {

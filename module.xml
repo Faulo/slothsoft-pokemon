@@ -49,7 +49,7 @@ Llo
     </fragment>
     <fragment name="home">
       <use-document ref="data/default"/>
-      <use-stylesheet ref="css/default"/>
+      <link-stylesheet ref="css/default"/>
       <fragment name="content">
         <use-template ref="xsl/home"/>
         <import ref="//slothsoft@core/DOM"/>

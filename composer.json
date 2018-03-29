@@ -22,12 +22,13 @@
         "slothsoft\/core": "dev-master",
         "slothsoft\/farah": "dev-master",
         "slothsoft\/lang": "dev-master",
+        "slothsoft\/minecraft": "dev-master",
         "slothsoft\/sse": "dev-master",
         "slothsoft\/w3c": "dev-master"
     },
     "autoload": {
         "files": [
-            "src\/registerModule.php"
+            "C:\\Webserver\\workspace\\slothsoft-pokemon\\src\\registerModule.php"
         ],
         "psr-0": {
             "Slothsoft\\Pokemon\\": "src\/"

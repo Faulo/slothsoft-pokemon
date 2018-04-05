@@ -16,19 +16,12 @@
     "type": "library",
     "require": {
         "php": ">=7.0",
-        "slothsoft/chat": "*",
-        "slothsoft/core": "*",
-        "slothsoft/farah": "*"
-    },
-    "require-dev": {
-        "phpunit/phpunit": ">=6.5",
         "slothsoft/chat": "dev-master",
         "slothsoft/core": "dev-master",
-        "slothsoft/farah": "dev-master",
-        "slothsoft/lang": "dev-master",
-        "slothsoft/minecraft": "dev-master",
-        "slothsoft/sse": "dev-master",
-        "slothsoft/w3c": "dev-master"
+        "slothsoft/farah": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=6.5"
     },
     "autoload": {
         "psr-0": {

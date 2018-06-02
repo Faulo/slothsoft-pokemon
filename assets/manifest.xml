@@ -17,19 +17,19 @@
     
     <fragment name="html">
 	    <fragment name="sprites">
-	      <use-document ref="/data/list"/>
-	      <use-template ref="/xsl/_sprites"/>
-	      <import ref="//slothsoft@core/api/HTML5"/>
+	      <use-document ref="/data/list" name="list"/>
+	      <use-template ref="/xsl/_sprites" name="_sprites"/>
+	      <import ref="//slothsoft@core/api/HTML5" name="HTML5"/>
 	    </fragment>
 	    <fragment name="team">
-	      <use-document ref="/static/team"/>
-	      <use-document ref="/static/list"/>
-	      <use-template ref="/xsl/_team"/>
-	      <import ref="//slothsoft@core/api/HTML5"/>
+	      <use-document ref="/static/team" name="team"/>
+	      <use-document ref="/static/list" name="list"/>
+	      <use-template ref="/xsl/_team" name="_team"/>
+	      <import ref="//slothsoft@core/api/HTML5" name="HTML5"/>
 	    </fragment>
 	    <fragment name="go-iv">
-	      <use-document ref="/data/go-iv"/>
-	      <use-template ref="/xsl/_go-iv"/>
+	      <use-document ref="/data/go-iv" name="go-iv"/>
+	      <use-template ref="/xsl/_go-iv" name="_go-iv"/>
 	    </fragment>
 	 </fragment>
   </assets>

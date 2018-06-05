@@ -2,9 +2,8 @@
     "name": "slothsoft/pokemon",
     "description": "A Farah module that processes Pokémon stuff.",
     "keywords": [
-        "farah-app",
-        "farah-module",
-        "slothsoft"
+        "slothsoft",
+        "farah-module"
     ],
     "license": "WTFPL",
     "authors": [

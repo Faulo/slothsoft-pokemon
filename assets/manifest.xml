@@ -1,35 +1,35 @@
 <?xml version="1.0"?>
 <assets xmlns="http://schema.slothsoft.net/farah/module">
-	<resource-directory name="xsl" type="application/xslt+xml" />
+	<resource-directory name="xsl" type="application/xslt+xml"/>
 
 	<directory name="static">
-		<resource name="go-data" path="go-data.json" type="application/json" />
-		<resource-directory name="go-trainers" path="go-trainers" type="application/xml" />
-		<resource name="team" path="team.xml" type="application/xml" />
-		<resource name="list" path="list.xml" type="application/xml" />
-		<resource-directory name="sprites" path="sprites" type="image/png" />
+		<resource name="go-data" path="go-data.json" type="application/json"/>
+		<resource-directory name="go-trainers" path="go-trainers" type="application/xml"/>
+		<resource name="team" path="team.xml" type="application/xml"/>
+		<resource name="list" path="list.xml" type="application/xml"/>
+		<resource-directory name="sprites" path="sprites" type="image/png"/>
 	</directory>
 
 	<fragment name="data">
-		<fragment name="list" />
-		<fragment name="go-iv" />
+		<fragment name="list"/>
+		<fragment name="go-iv"/>
 	</fragment>
 
 	<fragment name="html">
 		<fragment name="sprites">
-			<use-document ref="/data/list" name="list" />
-			<use-template ref="/xsl/_sprites" name="_sprites" />
-			<import ref="//slothsoft@core/api/HTML5" name="HTML5" />
+			<use-document ref="/data/list" name="list"/>
+			<use-template ref="/xsl/_sprites"/>
+			<import ref="//slothsoft@core/api/HTML5"/>
 		</fragment>
 		<fragment name="team">
-			<use-document ref="/static/team" name="team" />
-			<use-document ref="/static/list" name="list" />
-			<use-template ref="/xsl/_team" name="_team" />
-			<import ref="//slothsoft@core/api/HTML5" name="HTML5" />
+			<use-document ref="/static/team" name="team"/>
+			<use-document ref="/static/list" name="list"/>
+			<use-template ref="/xsl/_team"/>
+			<import ref="//slothsoft@core/api/HTML5"/>
 		</fragment>
 		<fragment name="go-iv">
-			<use-document ref="/data/go-iv" name="go-iv" />
-			<use-template ref="/xsl/_go-iv" name="_go-iv" />
+			<use-document ref="/data/go-iv" name="go-iv"/>
+			<use-template ref="/xsl/_go-iv"/>
 		</fragment>
 	</fragment>
 </assets>
